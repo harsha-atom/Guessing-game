@@ -1,0 +1,38 @@
+import java.util.Scanner;
+import java.io.*;
+
+public class Number_Guessing_Game {
+
+      public static void main(String[] args) {
+
+            int secretNo;
+
+            secretNo = (int)(Math.random() * 999 + 1);           
+
+            Scanner sc = new Scanner(System.in);
+
+            int guess;
+
+            do {
+
+                  System.out.print("Enter a guess (1-1000): ");
+
+                  guess = sc.nextInt();
+
+                  if (guess == secretNo)
+
+                        System.out.println("Your guess is correct. Congratulations!");
+
+                  else if (guess < secretNo)
+
+                        System.out.println("Your guess is smaller than the secret number.");
+
+                  else if (guess > secretNo)
+
+                        System.out.println("Your guess is greater than the secret number.");
+
+            } while (guess != secretNo);
+
+      }
+
+}
